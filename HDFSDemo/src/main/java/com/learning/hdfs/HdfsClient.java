@@ -48,6 +48,9 @@ public class HdfsClient {
         //1.获取文件系统
         Configuration configuration = new Configuration();
         // 设置双副本
+        // 参数优先级：
+        // 1.客户端代码中设置的值 > 2.ClassPath下的用户自定义配置文件（resources）
+        // > 3.服务器自定义配置（xxx-site.xml） > 4.服务器的默认配置（xxx-default.xml）
         configuration.set("dfs.replication", "2");
         FileSystem fs = FileSystem.get(new URI("hdfs://managerhd.bigdata:8020"), configuration, "zhengzhou");
 
