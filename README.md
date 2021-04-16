@@ -12,6 +12,6 @@ Kerberos User: zhengzhou@BIGDATA
 
 ```linux
 useradd zhengzhou
-passwd zhengzhou	(密码设置为：lc!@#456)
+passwd zhengzhou
 ```
 
