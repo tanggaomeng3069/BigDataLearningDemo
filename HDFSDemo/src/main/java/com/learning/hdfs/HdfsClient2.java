@@ -55,6 +55,7 @@ public class HdfsClient2 {
 
     /**
      * 创建目录
+     *
      * @throws IOException
      */
     @Test
@@ -67,6 +68,7 @@ public class HdfsClient2 {
      * 上传
      * 参数优先级
      * hdfs-default.xml => hdfs-site.xml=> 在项目资源目录下的配置文件 => 代码里面的配置
+     *
      * @throws IOException
      */
     @Test
@@ -83,6 +85,7 @@ public class HdfsClient2 {
 
     /**
      * 文件下载
+     *
      * @throws IOException
      */
     @Test
@@ -95,6 +98,7 @@ public class HdfsClient2 {
 
     /**
      * 删除
+     *
      * @throws IOException
      */
     @Test
@@ -129,6 +133,7 @@ public class HdfsClient2 {
 
     /**
      * 获取文件详细信息
+     *
      * @throws IOException
      */
     @Test
@@ -161,6 +166,7 @@ public class HdfsClient2 {
 
     /**
      * 判断是文件夹还是文件
+     *
      * @throws IOException
      */
     @Test
