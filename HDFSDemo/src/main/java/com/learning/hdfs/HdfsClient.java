@@ -62,7 +62,11 @@ public class HdfsClient {
         FileSystem fs = FileSystem.get(new URI("hdfs://managerhd.bigdata:8020"), configuration, "zhengzhou");
 
         //2.上传文件
-        fs.copyFromLocalFile(new Path("inputData/sunwukong.txt"), new Path("/zhengzhou"));
+        // 参数一：表示是否删除原数据
+        // 参数二：表示是否允许覆盖目标文件
+        // 参数三：原数据路径
+        // 参数四：目的路径
+        fs.copyFromLocalFile(false, true, new Path("inputData/sunwukong.txt"), new Path("/zhengzhou"));
 
         //3.关闭资源
         fs.close();
@@ -84,10 +88,10 @@ public class HdfsClient {
         FileSystem fs = FileSystem.get(new URI("hdfs://managerhd.bigdata:8020"), configuration, "zhengzhou");
 
         //2.执行下载操作
-        // boolean delSrc 指是否将原文件删除
-        // Path src 指要下载的文件路径
-        // Path dst 指将文件下载到的路径
-        // boolean useRawLocalFileSystem 是否开启文件校验
+        // 参数一：boolean delSrc 指是否将原文件删除
+        // 参数二：Path src 指要下载的文件路径
+        // 参数三：Path dst 指将文件下载到的路径
+        // 参数四：boolean useRawLocalFileSystem 是否不开启文件校验（true：不开启）
         // 注意：如果本地没有目录，直接下载并修改名称，如果本地存在目录，则下载到该目录下，不修改其文件名称
         fs.copyToLocalFile(false, new Path("/zhengzhou/sunwukong.txt"), new Path("./output"), true);
 
@@ -110,7 +114,14 @@ public class HdfsClient {
         FileSystem fs = FileSystem.get(new URI("hdfs://managerhd.bigdata:8020"), configuration, "zhengzhou");
 
         //2.执行删除
+        // 参数一：要删除的路径
+        // 参数二：是否递归删除
         fs.delete(new Path("/zhengzhou"), true);
+
+        // 场景
+        // 删除文件，参数二：false
+        // 删除空目录：参数二：false
+        // 删除非空目录：参数二：true
 
         //3.关闭资源
         fs.close();
