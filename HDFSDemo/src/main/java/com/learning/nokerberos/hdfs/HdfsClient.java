@@ -1,4 +1,4 @@
-package com.learning.hdfs;
+package com.learning.nokerberos.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;

@@ -1,19 +1,14 @@
-package com.learning.hdfs;
+package com.learning.nokerberos.hdfs;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
-import org.apache.hadoop.io.IOUtils;
-import org.apache.hadoop.yarn.webapp.hamlet2.Hamlet;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 /**
