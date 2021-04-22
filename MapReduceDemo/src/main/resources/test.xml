@@ -1,0 +1,10 @@
+<configuration>
+    <property>
+        <name>top.n</name>
+        <value>4</value>
+    </property>
+    <property>
+        <name>country</name>
+        <value>中国</value>
+    </property>
+</configuration>

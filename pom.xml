@@ -14,6 +14,7 @@
     <modules>
         <module>SparkDemo</module>
         <module>HDFSDemo</module>
+        <module>MapReduceDemo</module>
     </modules>
 
     <properties>
