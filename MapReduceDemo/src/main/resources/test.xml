@@ -1,3 +1,6 @@
+<!--
+和yarn-site.xml等配置文件格式相同
+-->
 <configuration>
     <property>
         <name>top.n</name>
