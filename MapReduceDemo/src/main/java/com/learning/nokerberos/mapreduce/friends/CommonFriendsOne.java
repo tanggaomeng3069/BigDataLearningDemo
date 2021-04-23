@@ -77,7 +77,7 @@ public class CommonFriendsOne {
         FileOutputFormat.setOutputPath(job, new Path("output"));
 
         boolean b = job.waitForCompletion(true);
-        System.exit(b ? 0 : -1);
+        System.exit(b ? 0 : 1);
 
     }
 

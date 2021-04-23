@@ -64,7 +64,7 @@ public class JobSubmitter {
 
         // 提交job给yarn
         boolean res = job.waitForCompletion(true);
-        System.exit(res ? 0 : -1);
+        System.exit(res ? 0 : 1);
 
     }
 }

@@ -41,7 +41,7 @@ public class JobSubmitter2 {
         job.setNumReduceTasks(6);
 
         boolean b = job.waitForCompletion(true);
-        System.exit(b?0:-1);
+        System.exit(b ? 0 : 1);
 
     }
 }

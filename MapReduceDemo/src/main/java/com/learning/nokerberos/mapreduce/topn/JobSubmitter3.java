@@ -37,7 +37,7 @@ public class JobSubmitter3 {
         FileOutputFormat.setOutputPath(job, new Path("output"));
 
         boolean b = job.waitForCompletion(true);
-        System.out.println(b ? 0 : -1);
+        System.out.println(b ? 0 : 1);
 
     }
 }

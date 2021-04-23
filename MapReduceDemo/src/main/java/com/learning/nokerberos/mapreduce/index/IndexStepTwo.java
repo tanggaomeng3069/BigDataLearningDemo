@@ -66,6 +66,6 @@ public class IndexStepTwo {
         job.setNumReduceTasks(1);
 
         boolean b = job.waitForCompletion(true);
-        System.exit(b ? 0 : -1);
+        System.exit(b ? 0 : 1);
     }
 }

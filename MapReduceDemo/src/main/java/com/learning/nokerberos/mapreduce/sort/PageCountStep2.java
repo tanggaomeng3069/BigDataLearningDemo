@@ -30,10 +30,11 @@ public class PageCountStep2 {
         }
     }
 
-    public static class PageCountStep2Reducer extends Reducer<PageCount,NullWritable,PageCount,NullWritable> {
+    public static class PageCountStep2Reducer extends Reducer<PageCount, NullWritable, PageCount, NullWritable> {
         @Override
-        protected void reduce(PageCount key, Iterable<NullWritable> values, Context context) throws IOException, InterruptedException {
-            context.write(key,NullWritable.get());
+        protected void reduce(PageCount key, Iterable<NullWritable> values, Context context) throws IOException,
+                InterruptedException {
+            context.write(key, NullWritable.get());
         }
     }
 
@@ -58,6 +59,6 @@ public class PageCountStep2 {
         job.setNumReduceTasks(1);
 
         boolean b = job.waitForCompletion(true);
-        System.exit(b?0:-1);
+        System.exit(b ? 0 : 1);
     }
 }
