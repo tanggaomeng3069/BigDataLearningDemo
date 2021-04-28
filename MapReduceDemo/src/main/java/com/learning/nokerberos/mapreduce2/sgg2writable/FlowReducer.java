@@ -1,4 +1,4 @@
-package com.learning.nokerberos.mapreduce.sgg2writable;
+package com.learning.nokerberos.mapreduce2.sgg2writable;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;

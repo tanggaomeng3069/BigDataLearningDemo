@@ -1,4 +1,4 @@
-package com.learning.nokerberos.mapreduce.sgg1wordcount;
+package com.learning.nokerberos.mapreduce2.sgg1wordcount;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
