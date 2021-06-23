@@ -31,7 +31,7 @@ public class TableDriver {
         job.setOutputKeyClass(TableBean.class);
         job.setOutputValueClass(NullWritable.class);
 
-        FileInputFormat.setInputPaths(job, new Path("inputData/inputtable"));
+        FileInputFormat.setInputPaths(job, new Path("inputData/inputtable/*"));
         FileOutputFormat.setOutputPath(job, new Path("output"));
 
         boolean b = job.waitForCompletion(true);
