@@ -30,7 +30,7 @@ public class MapJoinDriver {
         job.setOutputValueClass(NullWritable.class);
 
         // 加载缓存数据
-        job.addCacheFile(new URI("input/tablecache/pd.txt"));
+        job.addCacheFile(new URI("inputData/tablecache/pd.txt"));
         // Map端Join的逻辑不需要Reduce阶段，设置reduceTask数量为0
         job.setNumReduceTasks(0);
 
