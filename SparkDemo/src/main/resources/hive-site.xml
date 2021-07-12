@@ -1,0 +1,88 @@
+  <configuration>
+    
+    <property>
+      <name>hive.exec.scratchdir</name>
+      <value>/tmp/spark</value>
+    </property>
+    
+    <property>
+      <name>hive.metastore.client.connect.retry.delay</name>
+      <value>5</value>
+    </property>
+    
+    <property>
+      <name>hive.metastore.client.socket.timeout</name>
+      <value>1800</value>
+    </property>
+    
+    <property>
+      <name>hive.metastore.kerberos.keytab.file</name>
+      <value>/etc/security/keytabs/hive.service.keytab</value>
+    </property>
+    
+    <property>
+      <name>hive.metastore.kerberos.principal</name>
+      <value>hive/_HOST@INSIGHT.COM</value>
+    </property>
+    
+    <property>
+      <name>hive.metastore.sasl.enabled</name>
+      <value>true</value>
+    </property>
+    
+    <property>
+      <name>hive.metastore.uris</name>
+      <value>thrift://master.insight.com:9083</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.authentication</name>
+      <value>KERBEROS</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.authentication.kerberos.keytab</name>
+      <value>/etc/security/keytabs/spark.service.keytab</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.authentication.kerberos.principal</name>
+      <value>spark/_HOST@INSIGHT.COM</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.authentication.spnego.keytab</name>
+      <value>/etc/security/keytabs/spnego.service.keytab</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.authentication.spnego.principal</name>
+      <value>HTTP/_HOST@INSIGHT.COM</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.enable.doAs</name>
+      <value>false</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.thrift.http.port</name>
+      <value>10002</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.thrift.port</name>
+      <value>10016</value>
+    </property>
+    
+    <property>
+      <name>hive.server2.transport.mode</name>
+      <value>binary</value>
+    </property>
+    
+    <property>
+      <name>metastore.catalog.default</name>
+      <value>hive</value>
+    </property>
+    
+  </configuration>
