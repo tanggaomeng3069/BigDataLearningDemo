@@ -7,10 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="GraphXDemo" />
+        <module name="StructuredStreamingDemo" />
+        <module name="HiveDemo" />
         <module name="FlinkDemo" />
         <module name="OozieDemo" />
         <module name="HDFSDemo" />
         <module name="MapReduceDemo" />
+        <module name="HBaseDemo" />
         <module name="SparkDemo" />
         <module name="StormDemo" />
       </profile>
