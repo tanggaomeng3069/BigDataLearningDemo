@@ -9,7 +9,6 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.SparkContext
 
 object WriteTopic {
@@ -30,7 +29,7 @@ object WriteTopic {
             .appName("ReadKafkaWriteKafka")
             .config("spark.driver.extraJavaOptions", "-Djava.security.auth.login.config=" + javaSecurityAuthLoginConfig)
             .config("spark.executor.extraJavaOptions", "-Djava.security.auth.login.config=" + javaSecurityAuthLoginConfig)
-            .master("local[*]")
+//            .master("local[*]")
             .getOrCreate()
 
         val sc: SparkContext = spark.sparkContext
@@ -38,8 +37,8 @@ object WriteTopic {
         val dataRDD: RDD[Int] = sc.makeRDD(List(1, 2, 3, 4, 5, 6, 7, 8, 9))
 
         // 加载配置文件
-        val brokers: String = KerberosConfigLoader.getString("kafka.broker.list")
-        val topicWrite: String = KerberosConfigLoader.getString("kafka.topic.write")
+        val brokers: String = KerberosConfigLoader.getString("c2.kafka.broker.list")
+        val topicWrite: String = KerberosConfigLoader.getString("c2.kafka.topic.write")
         if (StringUtils.isEmpty(brokers) || StringUtils.isEmpty(topicWrite)) {
             println("未配置 Kafka 信息...")
             System.exit(0)

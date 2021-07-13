@@ -30,13 +30,13 @@ object SparkReadWriteESWithJar {
       * 两种写ES的方法，不同jar包提供
       */
     //第一种使用elasticsearch-spark-20_2.11 jar
-    val oneDf = spark.sparkContext.parallelize(Seq(
-      List("new1", "today1", "red"),
-      List("new2", "today2", "blue"))
-    ).map(r => (r.head, r(1), r(2)))
-      .toDF("content", "publish_date", "status")
-
-    EsSparkSQL.saveToEs(oneDf, noKerberosConfigLoader.getString("es.query.index"))
+//    val oneDf = spark.sparkContext.parallelize(Seq(
+//      List("new1", "today1", "red"),
+//      List("new2", "today2", "blue"))
+//    ).map(r => (r.head, r(1), r(2)))
+//      .toDF("content", "publish_date", "status")
+//
+//    EsSparkSQL.saveToEs(oneDf, noKerberosConfigLoader.getString("es.query.index"))
 
 
     //第二种使用elasticsearch-hadoop jar
@@ -44,7 +44,7 @@ object SparkReadWriteESWithJar {
       Map("content" -> "new3", "publish_date" -> "today3", "status" -> "no"),
       Map("content" -> "new4", "publish_date" -> "today4", "status" -> "bug")
     ))
-    oneRdd.saveToEs(noKerberosConfigLoader.getString("es.query.index"))
+//    oneRdd.saveToEs(noKerberosConfigLoader.getString("es.query.index"))
 
 
     //再读ES,查看写入的数据是否成功
