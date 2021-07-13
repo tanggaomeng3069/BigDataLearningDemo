@@ -120,6 +120,14 @@
             <artifactId>guava</artifactId>
             <version>18.0</version>
         </dependency>
+        <!-- jedis的连接驱动依赖 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.3.0</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
