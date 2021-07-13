@@ -15,6 +15,13 @@
         <module>SparkDemo</module>
         <module>HDFSDemo</module>
         <module>MapReduceDemo</module>
+        <module>OozieDemo</module>
+        <module>StormDemo</module>
+        <module>FlinkDemo</module>
+        <module>GraphXDemo</module>
+        <module>HBaseDemo</module>
+        <module>HiveDemo</module>
+        <module>StructuredStreamingDemo</module>
     </modules>
 
     <properties>

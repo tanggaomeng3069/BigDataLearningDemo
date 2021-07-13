@@ -6,10 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SparkDemo" />
-        <module name="MapReduceDemo" />
+        <module name="GraphXDemo" />
+        <module name="FlinkDemo" />
+        <module name="OozieDemo" />
         <module name="HDFSDemo" />
+        <module name="MapReduceDemo" />
+        <module name="SparkDemo" />
+        <module name="StormDemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Flink" target="1.7" />
+      <module name="GraphX" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
