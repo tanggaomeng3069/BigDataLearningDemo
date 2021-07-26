@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="GraphXDemo" />
         <module name="StructuredStreamingDemo" />
-        <module name="HiveDemo" />
-        <module name="FlinkDemo" />
+        <module name="HBaseDemo" />
         <module name="OozieDemo" />
         <module name="HDFSDemo" />
         <module name="MapReduceDemo" />
-        <module name="HBaseDemo" />
-        <module name="SparkDemo" />
         <module name="StormDemo" />
+        <module name="HiveDemo" />
+        <module name="SparkDemo" />
+        <module name="FlinkDemo" />
+        <module name="GraphXDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

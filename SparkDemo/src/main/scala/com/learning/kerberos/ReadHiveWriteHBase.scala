@@ -39,7 +39,7 @@ object ReadHiveWriteHBase {
         val spark: SparkSession = SparkSession
             .builder()
             .appName("ReadHiveWriteHBase")
-            .master("local[*]")
+//            .master("local[*]")
             .enableHiveSupport()
             .getOrCreate()
 
