@@ -22,7 +22,7 @@
     
     <property>
       <name>hive.metastore.kerberos.principal</name>
-      <value>hive/_HOST@INSIGHT.COM</value>
+      <value>hive/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -32,7 +32,7 @@
     
     <property>
       <name>hive.metastore.uris</name>
-      <value>thrift://master.insight.com:9083</value>
+      <value>thrift://master.inspur.com:9083</value>
     </property>
     
     <property>
@@ -47,7 +47,7 @@
     
     <property>
       <name>hive.server2.authentication.kerberos.principal</name>
-      <value>spark/_HOST@INSIGHT.COM</value>
+      <value>spark/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -57,7 +57,7 @@
     
     <property>
       <name>hive.server2.authentication.spnego.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>

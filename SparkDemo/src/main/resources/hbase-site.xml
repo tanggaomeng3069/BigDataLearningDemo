@@ -6,16 +6,6 @@
     </property>
     
     <property>
-      <name>hadoop.proxyuser.HTTP.groups</name>
-      <value>*</value>
-    </property>
-    
-    <property>
-      <name>hadoop.proxyuser.HTTP.hosts</name>
-      <value>*</value>
-    </property>
-    
-    <property>
       <name>hbase.bulkload.staging.dir</name>
       <value>/apps/hbase/staging</value>
     </property>
@@ -122,7 +112,7 @@
     
     <property>
       <name>hbase.master.kerberos.principal</name>
-      <value>hbase/_HOST@INSIGHT.COM</value>
+      <value>hbase/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -177,7 +167,7 @@
     
     <property>
       <name>hbase.regionserver.kerberos.principal</name>
-      <value>hbase/_HOST@INSIGHT.COM</value>
+      <value>hbase/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -196,6 +186,11 @@
     </property>
     
     <property>
+      <name>hbase.regionserver.thrift.http</name>
+      <value>true</value>
+    </property>
+    
+    <property>
       <name>hbase.regionserver.wal.codec</name>
       <value>org.apache.hadoop.hbase.regionserver.wal.IndexedWALEditCodec</value>
     </property>
@@ -207,7 +202,7 @@
     
     <property>
       <name>hbase.rest.authentication.kerberos.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -217,7 +212,7 @@
     
     <property>
       <name>hbase.rest.kerberos.principal</name>
-      <value>hbase/_HOST@INSIGHT.COM</value>
+      <value>hbase/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -238,6 +233,11 @@
     <property>
       <name>hbase.rpc.controllerfactory.class</name>
       <value></value>
+    </property>
+    
+    <property>
+      <name>hbase.rpc.engine</name>
+      <value>org.apache.hadoop.hbase.ipc.SecureRpcEngine</value>
     </property>
     
     <property>
@@ -262,7 +262,7 @@
     
     <property>
       <name>hbase.security.authentication.spnego.kerberos.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -277,12 +277,22 @@
     
     <property>
       <name>hbase.thrift.kerberos.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
       <name>hbase.thrift.keytab.file</name>
       <value>/etc/security/keytabs/spnego.service.keytab</value>
+    </property>
+    
+    <property>
+      <name>hbase.thrift.security.qop</name>
+      <value>auth</value>
+    </property>
+    
+    <property>
+      <name>hbase.thrift.support.proxyuser</name>
+      <value>true</value>
     </property>
     
     <property>
@@ -297,7 +307,7 @@
     
     <property>
       <name>hbase.zookeeper.quorum</name>
-      <value>manager.insight.com,master.insight.com,worker.insight.com</value>
+      <value>manager.inspur.com,master.inspur.com,worker.inspur.com</value>
     </property>
     
     <property>
@@ -318,16 +328,6 @@
     <property>
       <name>phoenix.query.timeoutMs</name>
       <value>60000</value>
-    </property>
-    
-    <property>
-      <name>phoenix.queryserver.kerberos.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
-    </property>
-    
-    <property>
-      <name>phoenix.queryserver.keytab.file</name>
-      <value>/etc/security/keytabs/spnego.service.keytab</value>
     </property>
     
     <property>

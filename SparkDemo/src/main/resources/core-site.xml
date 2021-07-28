@@ -7,7 +7,7 @@
     
     <property>
       <name>fs.defaultFS</name>
-      <value>hdfs://manager.insight.com:8020</value>
+      <value>hdfs://manager.inspur.com:8020</value>
       <final>true</final>
     </property>
     
@@ -53,7 +53,7 @@
     
     <property>
       <name>hadoop.http.authentication.kerberos.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -97,13 +97,23 @@
     </property>
     
     <property>
-      <name>hadoop.proxyuser.ambari-server-insight.groups</name>
+      <name>hadoop.proxyuser.ambari-server-inspur.groups</name>
       <value>*</value>
     </property>
     
     <property>
-      <name>hadoop.proxyuser.ambari-server-insight.hosts</name>
-      <value>manager.insight.com</value>
+      <name>hadoop.proxyuser.ambari-server-inspur.hosts</name>
+      <value>manager.inspur.com</value>
+    </property>
+    
+    <property>
+      <name>hadoop.proxyuser.hbase.groups</name>
+      <value>*</value>
+    </property>
+    
+    <property>
+      <name>hadoop.proxyuser.hbase.hosts</name>
+      <value>*</value>
     </property>
     
     <property>
@@ -123,12 +133,17 @@
     
     <property>
       <name>hadoop.proxyuser.hive.hosts</name>
-      <value>master.insight.com</value>
+      <value>*</value>
     </property>
     
     <property>
       <name>hadoop.proxyuser.HTTP.groups</name>
-      <value>users</value>
+      <value>*</value>
+    </property>
+    
+    <property>
+      <name>hadoop.proxyuser.HTTP.hosts</name>
+      <value>*</value>
     </property>
     
     <property>
@@ -138,6 +153,16 @@
     
     <property>
       <name>hadoop.proxyuser.httpfs.hosts</name>
+      <value>*</value>
+    </property>
+    
+    <property>
+      <name>hadoop.proxyuser.hue.groups</name>
+      <value>*</value>
+    </property>
+    
+    <property>
+      <name>hadoop.proxyuser.hue.hosts</name>
       <value>*</value>
     </property>
     
@@ -152,13 +177,33 @@
     </property>
     
     <property>
+      <name>hadoop.proxyuser.oozie.groups</name>
+      <value>*</value>
+    </property>
+    
+    <property>
+      <name>hadoop.proxyuser.oozie.hosts</name>
+      <value>*</value>
+    </property>
+    
+    <property>
+      <name>hadoop.proxyuser.spark.groups</name>
+      <value>*</value>
+    </property>
+    
+    <property>
+      <name>hadoop.proxyuser.spark.hosts</name>
+      <value>*</value>
+    </property>
+    
+    <property>
       <name>hadoop.proxyuser.yarn.groups</name>
       <value>*</value>
     </property>
     
     <property>
       <name>hadoop.proxyuser.yarn.hosts</name>
-      <value>manager.insight.com</value>
+      <value>manager.inspur.com</value>
     </property>
     
     <property>
@@ -170,39 +215,42 @@
       <name>hadoop.security.auth_to_local</name>
       <value>RULE:[1:$1@$0](ambari-qa-insight@INSIGHT.COM)s/.*/ambari-qa/
 RULE:[1:$1@$0](hdfs-insight@INSIGHT.COM)s/.*/hdfs/
-RULE:[1:$1@$0](spark-insight@INSIGHT.COM)s/.*/spark/
 RULE:[1:$1@$0](yarn-ats-insight@INSIGHT.COM)s/.*/yarn-ats/
 RULE:[1:$1@$0](.*@INSIGHT.COM)s/@.*//
 RULE:[1:$1@$0](ambari-qa-inspur@INSPUR.COM)s/.*/ambari-qa/
+RULE:[1:$1@$0](hbase-inspur@INSPUR.COM)s/.*/hbase/
 RULE:[1:$1@$0](hdfs-inspur@INSPUR.COM)s/.*/hdfs/
+RULE:[1:$1@$0](spark-inspur@INSPUR.COM)s/.*/spark/
 RULE:[1:$1@$0](yarn-ats-inspur@INSPUR.COM)s/.*/yarn-ats/
 RULE:[1:$1@$0](.*@INSPUR.COM)s/@.*//
 RULE:[2:$1@$0](amshbase@INSIGHT.COM)s/.*/ams/
 RULE:[2:$1@$0](amsmon@INSIGHT.COM)s/.*/ams/
 RULE:[2:$1@$0](amszk@INSIGHT.COM)s/.*/ams/
 RULE:[2:$1@$0](dn@INSIGHT.COM)s/.*/hdfs/
-RULE:[2:$1@$0](hive@INSIGHT.COM)s/.*/hive/
 RULE:[2:$1@$0](httpfs@INSIGHT.COM)s/.*/httpfs/
 RULE:[2:$1@$0](jhs@INSIGHT.COM)s/.*/mapred/
-RULE:[2:$1@$0](livy@INSIGHT.COM)s/.*/livy/
 RULE:[2:$1@$0](nm@INSIGHT.COM)s/.*/yarn/
 RULE:[2:$1@$0](nn@INSIGHT.COM)s/.*/hdfs/
-RULE:[2:$1@$0](rangeradmin@INSIGHT.COM)s/.*/ranger/
-RULE:[2:$1@$0](rangertagsync@INSIGHT.COM)s/.*/rangertagsync/
-RULE:[2:$1@$0](rangerusersync@INSIGHT.COM)s/.*/rangerusersync/
 RULE:[2:$1@$0](rm@INSIGHT.COM)s/.*/yarn/
-RULE:[2:$1@$0](spark@INSIGHT.COM)s/.*/spark/
 RULE:[2:$1@$0](yarn@INSIGHT.COM)s/.*/yarn/
 RULE:[2:$1@$0](yarn-ats-hbase@INSIGHT.COM)s/.*/yarn-ats/
 RULE:[2:$1@$0](amshbase@INSPUR.COM)s/.*/ams/
 RULE:[2:$1@$0](amsmon@INSPUR.COM)s/.*/ams/
 RULE:[2:$1@$0](amszk@INSPUR.COM)s/.*/ams/
 RULE:[2:$1@$0](dn@INSPUR.COM)s/.*/hdfs/
+RULE:[2:$1@$0](hbase@INSPUR.COM)s/.*/hbase/
+RULE:[2:$1@$0](hive@INSPUR.COM)s/.*/hive/
 RULE:[2:$1@$0](httpfs@INSPUR.COM)s/.*/httpfs/
 RULE:[2:$1@$0](jhs@INSPUR.COM)s/.*/mapred/
+RULE:[2:$1@$0](livy@INSPUR.COM)s/.*/livy/
 RULE:[2:$1@$0](nm@INSPUR.COM)s/.*/yarn/
 RULE:[2:$1@$0](nn@INSPUR.COM)s/.*/hdfs/
+RULE:[2:$1@$0](oozie@INSPUR.COM)s/.*/oozie/
+RULE:[2:$1@$0](rangeradmin@INSPUR.COM)s/.*/ranger/
+RULE:[2:$1@$0](rangertagsync@INSPUR.COM)s/.*/rangertagsync/
+RULE:[2:$1@$0](rangerusersync@INSPUR.COM)s/.*/rangerusersync/
 RULE:[2:$1@$0](rm@INSPUR.COM)s/.*/yarn/
+RULE:[2:$1@$0](spark@INSPUR.COM)s/.*/spark/
 RULE:[2:$1@$0](yarn@INSPUR.COM)s/.*/yarn/
 RULE:[2:$1@$0](yarn-ats-hbase@INSPUR.COM)s/.*/yarn-ats/
 DEFAULT</value>
@@ -221,6 +269,11 @@ DEFAULT</value>
     <property>
       <name>hadoop.security.instrumentation.requires.admin</name>
       <value>false</value>
+    </property>
+    
+    <property>
+      <name>hue.kerberos.principal.shortname</name>
+      <value>hue</value>
     </property>
     
     <property>

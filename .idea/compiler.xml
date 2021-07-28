@@ -21,6 +21,7 @@
     <bytecodeTargetLevel>
       <module name="Flink" target="1.7" />
       <module name="GraphX" target="1.7" />
+      <module name="HDPDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

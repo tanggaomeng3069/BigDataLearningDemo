@@ -2,7 +2,7 @@
     
     <property>
       <name>hadoop.http.cross-origin.allowed-origins</name>
-      <value>regex:.*[.]insight[.]com(:\d*)?</value>
+      <value>regex:.*[.]inspur[.]com(:\d*)?</value>
     </property>
     
     <property>
@@ -53,12 +53,12 @@
     
     <property>
       <name>hadoop.registry.system.accounts</name>
-      <value>sasl:yarn,sasl:jhs,sasl:hdfs-insight,sasl:rm,sasl:hive,sasl:spark</value>
+      <value>sasl:yarn,sasl:jhs,sasl:hdfs-inspur,sasl:rm,sasl:hive,sasl:spark</value>
     </property>
     
     <property>
       <name>hadoop.registry.zk.quorum</name>
-      <value>master.insight.com:2181,manager.insight.com:2181,worker.insight.com:2181</value>
+      <value>master.inspur.com:2181,manager.inspur.com:2181,worker.inspur.com:2181</value>
     </property>
     
     <property>
@@ -113,12 +113,12 @@
     
     <property>
       <name>yarn.log.server.url</name>
-      <value>http://master.insight.com:19888/jobhistory/logs</value>
+      <value>http://master.inspur.com:19888/jobhistory/logs</value>
     </property>
     
     <property>
       <name>yarn.log.server.web-service.url</name>
-      <value>http://master.insight.com:8188/ws/v1/applicationhistory</value>
+      <value>http://master.inspur.com:8188/ws/v1/applicationhistory</value>
     </property>
     
     <property>
@@ -288,7 +288,7 @@
     
     <property>
       <name>yarn.nodemanager.principal</name>
-      <value>nm/_HOST@INSIGHT.COM</value>
+      <value>nm/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -410,17 +410,17 @@
     
     <property>
       <name>yarn.nodemanager.webapp.spnego-principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
       <name>yarn.resourcemanager.address</name>
-      <value>manager.insight.com:8050</value>
+      <value>manager.inspur.com:8050</value>
     </property>
     
     <property>
       <name>yarn.resourcemanager.admin.address</name>
-      <value>manager.insight.com:8141</value>
+      <value>manager.inspur.com:8141</value>
     </property>
     
     <property>
@@ -465,7 +465,7 @@
     
     <property>
       <name>yarn.resourcemanager.hostname</name>
-      <value>manager.insight.com</value>
+      <value>manager.inspur.com</value>
     </property>
     
     <property>
@@ -505,7 +505,7 @@
     
     <property>
       <name>yarn.resourcemanager.principal</name>
-      <value>rm/_HOST@INSIGHT.COM</value>
+      <value>rm/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -535,12 +535,12 @@
     
     <property>
       <name>yarn.resourcemanager.resource-tracker.address</name>
-      <value>manager.insight.com:8025</value>
+      <value>manager.inspur.com:8025</value>
     </property>
     
     <property>
       <name>yarn.resourcemanager.scheduler.address</name>
-      <value>manager.insight.com:8030</value>
+      <value>manager.inspur.com:8030</value>
     </property>
     
     <property>
@@ -575,7 +575,7 @@
     
     <property>
       <name>yarn.resourcemanager.webapp.address</name>
-      <value>manager.insight.com:8088</value>
+      <value>manager.inspur.com:8088</value>
     </property>
     
     <property>
@@ -590,7 +590,7 @@
     
     <property>
       <name>yarn.resourcemanager.webapp.https.address</name>
-      <value>manager.insight.com:8090</value>
+      <value>manager.inspur.com:8090</value>
     </property>
     
     <property>
@@ -600,7 +600,7 @@
     
     <property>
       <name>yarn.resourcemanager.webapp.spnego-principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -625,7 +625,7 @@
     
     <property>
       <name>yarn.resourcemanager.zk-address</name>
-      <value>master.insight.com:2181,manager.insight.com:2181,worker.insight.com:2181</value>
+      <value>master.inspur.com:2181,manager.inspur.com:2181,worker.inspur.com:2181</value>
     </property>
     
     <property>
@@ -695,7 +695,7 @@
     
     <property>
       <name>yarn.timeline-service.address</name>
-      <value>master.insight.com:10200</value>
+      <value>master.inspur.com:10200</value>
     </property>
     
     <property>
@@ -810,7 +810,7 @@
     
     <property>
       <name>yarn.timeline-service.http-authentication.kerberos.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -829,13 +829,13 @@
     </property>
     
     <property>
-      <name>yarn.timeline-service.http-authentication.proxyuser.ambari-server-insight.groups</name>
+      <name>yarn.timeline-service.http-authentication.proxyuser.ambari-server-inspur.groups</name>
       <value>*</value>
     </property>
     
     <property>
-      <name>yarn.timeline-service.http-authentication.proxyuser.ambari-server-insight.hosts</name>
-      <value>manager.insight.com</value>
+      <name>yarn.timeline-service.http-authentication.proxyuser.ambari-server-inspur.hosts</name>
+      <value>manager.inspur.com</value>
     </property>
     
     <property>
@@ -915,17 +915,17 @@
     
     <property>
       <name>yarn.timeline-service.principal</name>
-      <value>yarn/_HOST@INSIGHT.COM</value>
+      <value>yarn/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
       <name>yarn.timeline-service.reader.webapp.address</name>
-      <value>manager.insight.com:8198</value>
+      <value>manager.inspur.com:8198</value>
     </property>
     
     <property>
       <name>yarn.timeline-service.reader.webapp.https.address</name>
-      <value>manager.insight.com:8199</value>
+      <value>manager.inspur.com:8199</value>
     </property>
     
     <property>
@@ -965,12 +965,12 @@
     
     <property>
       <name>yarn.timeline-service.webapp.address</name>
-      <value>master.insight.com:8188</value>
+      <value>master.inspur.com:8188</value>
     </property>
     
     <property>
       <name>yarn.timeline-service.webapp.https.address</name>
-      <value>master.insight.com:8190</value>
+      <value>master.inspur.com:8190</value>
     </property>
     
     <property>

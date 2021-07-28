@@ -94,7 +94,7 @@
     
     <property>
       <name>dfs.datanode.kerberos.principal</name>
-      <value>dn/_HOST@INSIGHT.COM</value>
+      <value>dn/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -209,13 +209,13 @@
     
     <property>
       <name>dfs.namenode.http-address</name>
-      <value>manager.insight.com:50070</value>
+      <value>manager.inspur.com:50070</value>
       <final>true</final>
     </property>
     
     <property>
       <name>dfs.namenode.https-address</name>
-      <value>manager.insight.com:50470</value>
+      <value>manager.inspur.com:50470</value>
     </property>
     
     <property>
@@ -225,12 +225,12 @@
     
     <property>
       <name>dfs.namenode.kerberos.internal.spnego.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
       <name>dfs.namenode.kerberos.principal</name>
-      <value>nn/_HOST@INSIGHT.COM</value>
+      <value>nn/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -256,7 +256,7 @@
     
     <property>
       <name>dfs.namenode.rpc-address</name>
-      <value>manager.insight.com:8020</value>
+      <value>manager.inspur.com:8020</value>
     </property>
     
     <property>
@@ -266,7 +266,7 @@
     
     <property>
       <name>dfs.namenode.secondary.http-address</name>
-      <value>master.insight.com:50090</value>
+      <value>master.inspur.com:50090</value>
     </property>
     
     <property>
@@ -306,12 +306,12 @@
     
     <property>
       <name>dfs.secondary.namenode.kerberos.internal.spnego.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
       <name>dfs.secondary.namenode.kerberos.principal</name>
-      <value>nn/_HOST@INSIGHT.COM</value>
+      <value>nn/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
@@ -326,7 +326,7 @@
     
     <property>
       <name>dfs.web.authentication.kerberos.principal</name>
-      <value>HTTP/_HOST@INSIGHT.COM</value>
+      <value>HTTP/_HOST@INSPUR.COM</value>
     </property>
     
     <property>
