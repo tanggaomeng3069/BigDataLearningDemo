@@ -24,7 +24,8 @@ public class WordCountDriver {
         // 开启map端输出压缩
         conf.setBoolean("mapreduce.map.output.compress", true);
         // 设置map端输出压缩方式
-        conf.setClass("mapreduce.map.output.compress.codec", DefaultCodec.class, CompressionCodec.class);
+        // SnappyCodec结合CentOS7.5以上版本系统使用，在Win10 IDEA无法运行
+        conf.setClass("mapreduce.map.output.compress.codec", SnappyCodec.class, CompressionCodec.class);
         Job job = Job.getInstance(conf);
 
         // 2 设置jar包路径
