@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+/**
+ * MapJoin场景使用在：一张表十分小、一张表很大 关联的场景
+ */
 public class MapJoinDriver {
 
     public static void main(String[] args) throws IOException, URISyntaxException, ClassNotFoundException, InterruptedException {
@@ -29,8 +32,10 @@ public class MapJoinDriver {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(NullWritable.class);
 
-        // 加载缓存数据
+        // 加载缓存数据，缓存普通文件到 Task 运行节点。
         job.addCacheFile(new URI("inputData/tablecache/pd.txt"));
+        // 如果是集群运行(yarn client/cluster)，需要设置 HDFS 路径
+        // job.addCacheFile(new URI("hdfs://manager.bigdata:8020/inputData/tablecache/pd.txt"));
         // Map端Join的逻辑不需要Reduce阶段，设置reduceTask数量为0
         job.setNumReduceTasks(0);
 
