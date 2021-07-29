@@ -12,9 +12,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/Flink/pom.xml" />
-        <option value="$PROJECT_DIR$/GraphX/pom.xml" />
-        <option value="$PROJECT_DIR$/HDPDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/YarnDemo/pom.xml" />
       </set>
     </option>
   </component>

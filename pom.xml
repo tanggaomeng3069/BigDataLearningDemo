@@ -22,7 +22,7 @@
         <module>HBaseDemo</module>
         <module>HiveDemo</module>
         <module>StructuredStreamingDemo</module>
-        <module>HDPDemo</module>
+        <module>YarnDemo</module>
     </modules>
 
     <properties>
