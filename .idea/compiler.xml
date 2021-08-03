@@ -16,11 +16,12 @@
         <module name="HiveDemo" />
         <module name="SparkDemo" />
         <module name="FlinkDemo" />
+        <module name="ZookeeperDemo" />
         <module name="YarnDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="YarnDemo" target="1.7" />
+      <module name="YarnDemo" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
