@@ -18,5 +18,6 @@
     <file url="file://$PROJECT_DIR$/StructuredStreamingDemo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/YarnDemo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ZookeeperDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ZookeeperDemo/src/main/resources" charset="UTF-8" />
   </component>
 </project>
