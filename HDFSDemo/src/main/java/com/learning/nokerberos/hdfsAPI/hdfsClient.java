@@ -1,4 +1,4 @@
-package com.learning.nokerberos.hdfs;
+package com.learning.nokerberos.hdfsAPI;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
@@ -15,7 +15,7 @@ import java.util.Arrays;
  * @Description:
  * @Version 1.0
  */
-public class HdfsClient {
+public class hdfsClient {
 
     /**
      * 在HDFS上指定用户，创建指定目录

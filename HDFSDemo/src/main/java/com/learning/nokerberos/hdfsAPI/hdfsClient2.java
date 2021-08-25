@@ -1,4 +1,4 @@
-package com.learning.nokerberos.hdfs;
+package com.learning.nokerberos.hdfsAPI;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
@@ -23,7 +23,7 @@ import java.util.Arrays;
  * 3、关闭资源
  * HDFS  zookeeper
  */
-public class HdfsClient2 {
+public class hdfsClient2 {
     private FileSystem fs;
 
     @Before

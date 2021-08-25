@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ZookeeperDemo" />
         <module name="StructuredStreamingDemo" />
+        <module name="StructuredStreaming" />
         <module name="HBaseDemo" />
         <module name="OozieDemo" />
         <module name="HDFSDemo" />
