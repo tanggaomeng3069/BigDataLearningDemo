@@ -127,7 +127,4 @@ public class hdfsClient3 {
         IOUtils.closeStream(fileOutputStream);
         IOUtils.closeStream(fsDataInputStream);
     }
-
-
-
 }
