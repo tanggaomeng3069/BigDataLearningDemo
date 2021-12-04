@@ -24,6 +24,8 @@
         <module>StructuredStreamingDemo</module>
         <module>YarnDemo</module>
         <module>ZookeeperDemo</module>
+        <module>TestDemo</module>
+        <module>RabbitMQDemo</module>
     </modules>
 
     <properties>
