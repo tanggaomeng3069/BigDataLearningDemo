@@ -21,8 +21,8 @@ public class Task04 {
         // 1.创建连接RabbitMQ channel
         try (final Channel channel = RabbitMqUtils.getChannel()) {
             // 不公平分发消息
-            int prefetchCount = 1;
-            channel.basicQos(prefetchCount);
+            //int prefetchCount = 1;
+            //channel.basicQos(prefetchCount);
 
             // 2.生成队列（队列名称，持久化，队列不共享，队列不自动删除，其他参数）
             // 消息持久化：需要把原先存在的队列删除或者重新创建一个新的队列，否则报错

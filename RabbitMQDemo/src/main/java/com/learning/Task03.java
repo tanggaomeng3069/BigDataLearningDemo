@@ -11,7 +11,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * @Author: tanggaomeng
  * @Date: 2021/12/8 14:05
- * @Description:
+ * @Description: 队列、消息持久化
  * @Version: 1.0
  */
 public class Task03 {

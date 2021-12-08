@@ -21,14 +21,14 @@ public class Worker042 {
         // 1.获取RabbitMQ连接channel
         final Channel channel = RabbitMqUtils.getChannel();
         // 不公平分发消息
-        int prefetchCount = 1;
+        int prefetchCount = 100;
         channel.basicQos(prefetchCount);
 
         System.out.println("C42等待接收消息处理时间较短...");
         // 2.消息消费的时候如何处理
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
-            SleepUtils.sleep(30);
+            SleepUtils.sleep(5);
             System.out.println("接收到消息: " + message);
             /**
              * 3.消息标记 Tag

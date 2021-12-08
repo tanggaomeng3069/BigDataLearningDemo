@@ -21,7 +21,7 @@ public class Worker041 {
         // 1.获取RabbitMQ连接channel
         final Channel channel = RabbitMqUtils.getChannel();
         // 不公平分发消息
-        int prefetchCount = 1;
+        int prefetchCount = 100;
         channel.basicQos(prefetchCount);
 
         System.out.println("C41等待接收消息处理时间较短...");

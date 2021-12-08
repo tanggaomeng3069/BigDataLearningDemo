@@ -10,7 +10,7 @@ import java.util.concurrent.TimeoutException;
 /**
  * @Author: tanggaomeng
  * @Date: 2021/12/8 14:05
- * @Description:
+ * @Description: 分发消息采用轮询的方式：Worker021、Worker022，轮询发送消息
  * @Version: 1.0
  */
 public class Task02 {
