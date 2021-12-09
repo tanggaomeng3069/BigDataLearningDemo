@@ -1,4 +1,4 @@
-package com.learning.deadTTL;
+package com.learning.deadTTLExpired;
 
 import com.learning.RabbitMqUtils;
 import com.rabbitmq.client.BuiltinExchangeType;

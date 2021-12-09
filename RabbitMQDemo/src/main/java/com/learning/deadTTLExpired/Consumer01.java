@@ -1,4 +1,4 @@
-package com.learning.deadTTL;
+package com.learning.deadTTLExpired;
 
 import com.learning.RabbitMqUtils;
 import com.rabbitmq.client.BuiltinExchangeType;
@@ -36,6 +36,7 @@ public class Consumer01 {
         channel.queueBind(deadQueue, DEAD_EXCHANGE, "lisi");
 
         // 正常队列绑定死信队列
+        // 注意：如果修改了参数，需要先删除队列，再重新生成
         final HashMap<String, Object> params = new HashMap<>();
         //正常队列设置死信交换机 参数 key 是固定值
         params.put("x-dead-letter-exchange", DEAD_EXCHANGE);
