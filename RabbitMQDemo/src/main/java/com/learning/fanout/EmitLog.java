@@ -1,6 +1,7 @@
 package com.learning.fanout;
 
 import com.learning.RabbitMqUtils;
+import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 
 import java.io.IOException;
@@ -24,7 +25,8 @@ public class EmitLog {
              * 1.exchange 的名称
              * 2.exchange 的类型
              */
-            channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+            // channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+            channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT);
             Scanner sc = new Scanner(System.in);
             System.out.println("请输入信息：");
             while (sc.hasNext()) {

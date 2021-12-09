@@ -1,6 +1,7 @@
 package com.learning.fanout;
 
 import com.learning.RabbitMqUtils;
+import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
 
@@ -20,7 +21,8 @@ public class ReceiveLog01 {
     public static void main(String[] args) throws IOException, TimeoutException {
         final Channel channel = RabbitMqUtils.getChannel();
         // 声明交换机和类型
-        channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+        // channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+        channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.FANOUT);
         /**
          * 生成一个临时队列 队列的名称是随机的
          * 当消费者断开和该队列的连接时 队列自动删除
